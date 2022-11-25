@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентов</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="students__title">Студенты</h1>
+
+            <form action="" class="mb-3" id="students__add">
+                <div class="mb-3"><input class="form-control" type="text" placeholder="Фамилия" id="input-surname"></div>
+                <div class="mb-3"><input class="form-control" type="text" placeholder="Имя" id="input-name"></div>
+                <div class="mb-3"><input class="form-control" type="text" placeholder="Отчество" id="input-middlename"></div>
+                <div class="mb-3"><input class="form-control" type="date" placeholder="Дата рождения" id="input-birthdate"></div>
+                <div class="mb-3"><input class="form-control" type="number" min="2019" max="2023" placeholder="Дата начала обучения" id="input-start"></div>
+                <div class="mb-3"><input class="form-control" type="text" placeholder="Факультет" id="input-faculty"></div>
+                <button class="btn btn-primary">Добавить студента</button>
+            </form>
+
+            <table class="table table-dark table-hover students__table">
+                <thead>
+                    <th data-column="fio">ФИО</th>
+                    <th data-column="birthDate">Дата рождения</th>
+                    <th data-column="startEducation">Дата начала обучения</th>
+                    <th data-column="faculty">Факультет</th>
+                </thead>
+                <tbody id="students__list"></tbody>
+            </table>
+        </div>
+    </section>
+    <script defer type="module" src="js/main.js"></script>
+</body>
+</html>
