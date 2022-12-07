@@ -14,14 +14,89 @@
         <div class="container">
             <h1 class="students__title">Студенты</h1>
 
-            <form action="" class="mb-3" id="students__add">
-                <div class="mb-3"><input class="form-control" type="text" placeholder="Фамилия" id="input-surname"></div>
-                <div class="mb-3"><input class="form-control" type="text" placeholder="Имя" id="input-name"></div>
-                <div class="mb-3"><input class="form-control" type="text" placeholder="Отчество" id="input-middlename"></div>
-                <div class="mb-3"><input class="form-control" type="date" placeholder="Дата рождения" id="input-birthdate"></div>
-                <div class="mb-3"><input class="form-control" type="number" min="2019" max="2023" placeholder="Дата начала обучения" id="input-start"></div>
-                <div class="mb-3"><input class="form-control" type="text" placeholder="Факультет" id="input-faculty"></div>
-                <button class="btn btn-primary">Добавить студента</button>
+            <form action="#" class="mb-3" id="students__add">
+
+                <div class="mb-3">
+                    <label for="surname">
+                        <input
+                        name="surname"
+                        class="form-control"
+                        type="text"
+                        placeholder="Фамилия"
+                        data-validate-field="surname"
+                        id="input-surname">
+                    </label>
+                </div>
+
+                <div class="mb-3">
+                    <label for="name">
+                        <input
+                        name="name"
+                        class="form-control"
+                        type="text"
+                        placeholder="Имя"
+                        data-validate-field="name"
+                        id="input-name">
+                    </label>
+                    </div>
+
+                <div class="mb-3">
+                    <label for="middlename">
+                        <input
+                        name="middlename"
+                        class="form-control"
+                        type="text"
+                        placeholder="Отчество"
+                        data-validate-field="middlename"
+                        id="input-middlename">
+                    </label>
+                    </div>
+
+                <div class="mb-3">
+                    <label for="birthdate">
+                        <input
+                        name="birthdate"
+                        class="form-control"
+                        type="date"
+                        placeholder="Дата рождения"
+                        data-validate-field="birthdate"
+                        id="input-birthdate">
+                    </label>
+                    </div>
+
+                <div class="mb-3">
+                    <label for="education-start">
+                        <input
+                        name="education-start"
+                        class="form-control"
+                        type="number" min="2019" max="2023"
+                        placeholder="Год начала обучения"
+                        data-validate-field="education-start"
+                        id="input-start">
+                    </label>
+                    </div>
+
+                <div class="mb-3">
+                    <label for="faculty">
+                        <input
+                        name="faculty"
+                        class="form-control"
+                        type="text"
+                        placeholder="Факультет"
+                        data-validate-field="faculty"
+                        id="input-faculty">
+                    </label>
+                    </div>
+
+                <button class="btn btn-primary" id="btn-primary">Добавить студента</button>
+            </form>
+
+            <form action="" class="mb-3" id="students__filter">
+                <div class="mb-3"><input class="form-control" type="text" placeholder="Имя" id="filter-name"></div>
+                <div class="mb-3"><input class="form-control" type="text" placeholder="Факультет" id="filter-faculty"></div>
+                <div class="mb-3"><input class="form-control" type="number" min="2019" max="2023" placeholder="Год начала обучения" id="filter-start"></div>
+                <div class="mb-3"><input class="form-control" type="number" placeholder="Дата окончания обучения" id="filter-end"></div>
+                <button class="btn btn-primary">Отфильтровать студента</button>
             </form>
 
             <table class="table table-dark table-hover students__table">
@@ -29,12 +104,14 @@
                     <th data-column="fio">ФИО</th>
                     <th data-column="birthDate">Дата рождения</th>
                     <th data-column="startEducation">Дата начала обучения</th>
+                    <th data-column="endEducation">Дата окончания обучения</th>
                     <th data-column="faculty">Факультет</th>
                 </thead>
                 <tbody id="students__list"></tbody>
             </table>
         </div>
     </section>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script defer type="module" src="js/main.js"></script>
 </body>
 </html>

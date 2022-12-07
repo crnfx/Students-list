@@ -26,7 +26,7 @@ html {
   /* helpers */
 
   .container {
-	  max-width: 1400px;
+	  max-width: 1500px;
 	  padding: 0 15px;
 	  margin: 0 auto;
   }
@@ -53,12 +53,25 @@ html {
   }
 
   /* content */
-  
+
   .btn-primary {
     background-color: #212529;
     border: none;
   }
-  
+
+  label {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  th {
+    cursor: pointer;
+  }
+
+  th:hover {
+    background-color: #333333;
+  }
 
 
-  
+

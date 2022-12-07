@@ -1,11 +1,12 @@
 export default class Student {
-    constructor(name, surname, middleName, birthDate, startEducation, faculty) {
+    constructor(name, surname, middleName, birthDate, startEducation, faculty, endEducation) {
         this.name = name
         this.surname = surname
         this.middleName = middleName
         this.birthDate = birthDate
         this.startEducation = startEducation
         this.faculty = faculty
+        this.endEducation = endEducation
     }
 
     get fio() {
@@ -26,6 +27,12 @@ export default class Student {
         return dd + '.' + mm + '.' + yyyy;
     }
 
+    // Вычисляю дату конца обучения
+    getEndEducationYear() {
+        const endEducation = this.startEducation + 4;
+        return endEducation;
+    }
+
     getAge() {
         let now = new Date();
         let diffInMilliseconds = now.getTime() - this.birthDate.getTime();
@@ -35,7 +42,11 @@ export default class Student {
     getFaculty() {
         return this.faculty;
     }
+
 }
+
+
+
 
 
 
